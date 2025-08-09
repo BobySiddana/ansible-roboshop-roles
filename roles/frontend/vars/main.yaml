@@ -1,3 +1,5 @@
 CATALOGUE_HOST: catalogue.dawsj.space
 USER_HOST: user.dawsj.space
 CART_HOST: cart.dawsj.space
+SHIPPING_HOST: shipping.dawsj.space
+PAYMENT_HOST: payment.dawsj.space
