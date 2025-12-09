@@ -6,9 +6,7 @@
 - name: nodejs setup
   include_role:
     name: common
-    tasks_from: nodejs.yaml
-
-- name: copy mongodb repo
+    tasks_from: nodejs
   ansible.builtin.copy:
     src: mongo.repo
     dest: /etc/yum.repos.d/mongo.repo
@@ -41,9 +39,9 @@
     name: common
     tasks_from: systemd.yaml
 
-# - name: Deployment
-#   tags: 
-#   - deployment
-#   import_role:
-#     name: common
-#     tasks_from: deployment
+- name: Deployment
+  tags: 
+  - deployment
+  import_role:
+    name: common
+    tasks_from: deployment
